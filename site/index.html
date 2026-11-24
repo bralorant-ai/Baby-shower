@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¡Nuestro Baby Shower!</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="hero">
+  <span class="cloud c1"></span><span class="cloud c2"></span>
+  <span class="star s1">✦</span><span class="star s2">✦</span><span class="star s3">✦</span>
+  <svg class="bear" viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="30" r="16" fill="#D9BF9B"/><circle cx="90" cy="30" r="16" fill="#D9BF9B"/><circle cx="30" cy="30" r="8" fill="#EBCFCB"/><circle cx="90" cy="30" r="8" fill="#EBCFCB"/><circle cx="60" cy="64" r="44" fill="#E6CFAB"/><ellipse cx="60" cy="78" rx="18" ry="14" fill="#FBF6EC"/><circle cx="45" cy="58" r="4" fill="#3B4538"/><circle cx="75" cy="58" r="4" fill="#3B4538"/><ellipse cx="60" cy="72" rx="6" ry="4.5" fill="#3B4538"/><path d="M52 82q8 7 16 0" stroke="#3B4538" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="36" cy="72" r="6" fill="#EBCFCB" opacity=".7"/><circle cx="84" cy="72" r="6" fill="#EBCFCB" opacity=".7"/></svg>
+  <h1>¡Nuestro Baby Shower!</h1>
+  <p class="lead">Nos hace mucha ilusión compartir contigo la llegada de nuestro bebé. Si deseas regalarnos algo, hemos preparado esta lista con algunas cositas que nos serán muy útiles.</p>
+</header>
+
+<main class="wrap">
+  <section class="counts" aria-live="polite">
+    <div><b id="nAvail">–</b><span>disponibles</span></div>
+    <div><b id="nTaken">–</b><span>reservados</span></div>
+  </section>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="Buscar un regalo…" aria-label="Buscar un regalo">
+    <label class="check"><input type="checkbox" id="onlyAvail"> Solo disponibles</label>
+    <div id="chips" class="chips" role="group" aria-label="Categorías"></div>
+  </section>
+
+  <section id="grid" class="grid" aria-live="polite"><p class="empty">Cargando regalos…</p></section>
+</main>
+
+<footer>Con cariño 💛 · <a href="admin.html">Organizadores</a></footer>
+
+<dialog id="dlg">
+  <div id="formView">
+    <h2 id="dlgTitle"></h2>
+    <p id="dlgDesc" class="muted"></p>
+    <form id="form">
+      <label>Tu nombre<input id="guest" required maxlength="80" autocomplete="name"></label>
+      <label>Mensaje para los papás (opcional)<textarea id="msg" maxlength="500" rows="3"></textarea></label>
+      <p id="err" class="err" role="alert" hidden></p>
+      <div class="row"><button type="button" class="btn ghost" id="cancel">Cancelar</button><button class="btn" id="ok">Confirmar reserva</button></div>
+    </form>
+  </div>
+  <div id="thanksView" hidden>
+    <h2 id="thanksTitle"></h2>
+    <p>Tu regalo quedó reservado. Gracias por acompañarnos en esta etapa tan especial 💛</p>
+    <div class="row"><button class="btn" id="close">Cerrar</button></div>
+  </div>
+</dialog>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
